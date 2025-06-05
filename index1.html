@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Page</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #fffdd0;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+}
+
+.topic {
+    color: red;
+    margin-top: 20px;
+}
+
+img {
+    display: block;
+    margin: 10px auto 30px;
+    border-radius: 10px;
+    max-width: 100%;
+}
+button {
+            display: block;
+            margin: 30px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <h1>Creation of a Web Page</h1>
+    <h2 class="topic">Frontend Development:</h2>
+    <p>
+        Deals with the part of the website users see and interact with.<br>
+        <strong>Technologies:</strong> HTML (structure), CSS (styling), and JavaScript (interactivity).<br>
+        <a href="https://en.wikipedia.org/wiki/Front-end_web_development" target="_blank"><strong>Learn More</strong></a>
+    </p>
+    <img src="images/frontend.jpg" alt="Frontend Development" width="400">
+    <button id="fini">Finished</button>
+    <script >
+        document.getElementById("fini").addEventListener("click", function() {
+            alert("Good Job");
+        });
+    </script>
+</body>
+</html>

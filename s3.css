@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #012A5E;
+  color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.quiz-container {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #012A5E;
+}
+
+h2 {
+  font-size: 20px;
+  color: #012A5E;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.question {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #f0f0f0;
+}
+
+.btn.correct {
+  background-color: #d4edda;
+  border-color: #28a745;
+}
+
+.btn.wrong {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+}
+
+#next-btn,
+#joke-btn {
+  margin-top: 20px;
+  background-color: #012A5E;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: none;
+}
+
+#next-btn:hover,
+#joke-btn:hover {
+  background-color: #001f45;
+}
+
+#joke-box {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-style: italic;
+  font-size: 15px;
+  border-left: 4px solid #012A5E;
+}
+
+.joke-section {
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .quiz-container {
+    padding: 20px;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+
+  #next-btn,
+  #joke-btn {
+    font-size: 15px;
+    padding: 10px 16px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .question {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tarun Reddy | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">Tarun Reddy</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#todo">To-Do</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="mobile-menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section id="about" class="section about-section">
+    <h1>About Me</h1>
+    <p>I'm Tarun Reddy, passionate about building clean and functional interfaces. I focus on web development and AI-powered applications. I'm driven by design, data, and delivering engaging digital experiences.</p>
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML, CSS, JavaScript</li>
+      <li>React, Responsive Web Design</li>
+      <li>Python, Flask, YOLOv8</li>
+    </ul>
+    <h2>Interests</h2>
+    <ul class="interests-list">
+      <li>UI/UX Design</li>
+      <li>Machine Learning & AI</li>
+      <li>Frontend Experiments</li>
+    </ul>
+  </section>
+  <section id="projects" class="section projects-section">
+    <h1>Projects</h1>
+    <div class="project">
+      <h3>Electric Meter Reader</h3>
+      <p>YOLOv8 + Flask OCR app to automate meter readings.</p>
+      <a href="https://github.com/shkumar5-india/Smart-meter-reading-detection-Using-YOLOv8" class="project-link">View Project</a>
+    </div>
+    <div class="project">
+      <h3>Water Quality Prediction</h3>
+      <p>Machine learning app to predict water quality based on various parameters.</p>
+      <a href="https://github.com/Tarx007/Water_Quality_Prediction" class="project-link">View Project</a>
+    </div>
+    <div class="project">
+      <h3>3D Solar System Simulation</h3>
+      <p>Three.js-powered visualization with interactive orbits.</p>
+      <a href="https://github.com/Tarx007/3d-Solar-System" class="project-link">View Project</a>
+    </div>
+  </section>
+  <section id="todo" class="section todo-section">
+    <h1>To-Do List / Note-Taking App</h1>
+    <p>Add your tasks or notes below. They will be saved in your browser and persist even after you reload the page.</p>
+    <div class="todo-input-group">
+      <input id="taskInput" type="text" placeholder="Add new task or note..." />
+      <button id="addTaskBtn">Add</button>
+    </div>
+    <ul id="taskList"></ul>
+  </section>
+  <section id="products" class="section products-section">
+    <h1>Product Listing</h1>
+    <p>Filter and sort products by category, price, or rating.</p>
+    <div class="filters">
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="tech">Tech</option>
+        <option value="fashion">Fashion</option>
+      </select>
+      <select id="sortBy">
+        <option value="none">Sort By</option>
+        <option value="priceLow">Price: Low to High</option>
+        <option value="ratingHigh">Rating: High to Low</option>
+      </select>
+    </div>
+    <div class="product-grid" id="productContainer"></div>
+  </section>
+  <section id="contact" class="section contact-section">
+    <h1>Contact</h1>
+    <div class="social-links">
+      <a href="mailto:reddytarun429@gmail.com" class="email-link"><i class="fas fa-envelope"></i> Gmail</a>
+      <a href="https://www.linkedin.com/in/tarun-reddy-158a582b6/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a>
+      <a href="https://github.com/Tarx007" target="_blank"><i class="fab fa-github"></i> Github</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Tarun Reddy. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

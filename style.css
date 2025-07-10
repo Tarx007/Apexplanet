@@ -1,0 +1,132 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.filter-controls input,
+.filter-controls select {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 160px;
+  flex: 1;
+}
+.products {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.product {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+.product img {
+  max-width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.product button {
+  margin-top: 0.5rem;
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.product button:hover {
+  background: #059669;
+}
+/* Checkout form and order summary */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 2rem auto;
+}
+form label {
+  font-weight: 500;
+}
+form input,
+form textarea {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+form button {
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+form button:hover {
+  background: #163176;
+}
+
+#summary {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: #f1f5f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+#summary h3 {
+  margin-bottom: 1rem;
+}
+#summary ul {
+  list-style: none;
+  padding: 0;
+}
+#summary ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Dark Mode for checkout */
+body.dark #summary {
+  background: #334155;
+}
+body.dark form {
+  background: #1e293b;
+}
+

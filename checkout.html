@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - My Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Checkout</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div id="summary">
+      <h3>Order Summary</h3>
+      <ul id="order-list"></ul>
+      <p><strong>Total: <span id="order-total">₹0.00</span></strong></p>
+    </div>
+
+    <form id="checkout-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" required />
+
+      <label for="address">Shipping Address</label>
+      <textarea id="address" rows="3" required></textarea>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </main>
+
+  <script>
+    const formatRupee = (price) => new Intl.NumberFormat('en-IN', {
+      style: 'currency',
+      currency: 'INR'
+    }).format(price);
+
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const listEl = document.getElementById('order-list');
+    const totalEl = document.getElementById('order-total');
+    let total = 0;
+
+    cart.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = `${item.name} × ${item.qty} = ${formatRupee(item.qty * item.price)}`;
+      listEl.appendChild(li);
+      total += item.qty * item.price;
+    });
+    totalEl.textContent = formatRupee(total);
+
+    document.getElementById('checkout-form').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Thank you! Your order has been placed.');
+      localStorage.removeItem('cart');
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>
